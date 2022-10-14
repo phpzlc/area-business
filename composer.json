@@ -1,0 +1,27 @@
+{
+    "name": "phpzlc/{变量}-business",
+    "description": "{变量}",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+      "phpzlc",
+      "{变量}",
+      "symfony"
+    ],
+    "homepage": "https://phpzlc.com/",
+    "authors": [
+      {
+        "name": "CJayHe",
+        "role": "Developer"
+      }
+    ],
+    "autoload": {
+      "psr-4": {
+        "PHPZlc\\{变量}Business\\": "src/"
+      }
+    },
+    "require": {
+      "phpzlc/phpzlc": "2.*"
+    }
+
+}
