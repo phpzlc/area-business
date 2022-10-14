@@ -1,7 +1,7 @@
-## {变量}-business
+## area-business
 
 组件介绍
 
 ## 使用文档
 
-[使用文档](https://phpzlc.com/doc/module/{变量}-business)
+[使用文档](https://phpzlc.com/doc/module/area-business)

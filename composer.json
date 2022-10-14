@@ -1,11 +1,11 @@
 {
-    "name": "phpzlc/{变量}-business",
-    "description": "{变量}",
+    "name": "phpzlc/area-business",
+    "description": "省市区业务组件",
     "license": "MIT",
     "type": "library",
     "keywords": [
       "phpzlc",
-      "{变量}",
+      "area",
       "symfony"
     ],
     "homepage": "https://phpzlc.com/",
@@ -17,7 +17,7 @@
     ],
     "autoload": {
       "psr-4": {
-        "PHPZlc\\{变量}Business\\": "src/"
+        "PHPZlc\\AreaBusiness\\": "src/"
       }
     },
     "require": {

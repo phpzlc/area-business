@@ -1,0 +1,4 @@
+# 得到有层级的省市区数据
+area_children:
+  path: /children
+  controller: App\Controller\Area\AreaController::children
