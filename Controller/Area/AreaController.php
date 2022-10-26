@@ -2,6 +2,7 @@
 
 namespace App\Controller\Area;
 
+use App\Entity\Area;
 use PHPZlc\PHPZlc\Responses\Responses;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -14,7 +15,7 @@ class AreaController extends AbstractController
      */
     public function children()
     {
-        $areaRepository = $this->getDoctrine()->getRepository('App:Area');
+        $areaRepository = $this->getDoctrine()->getRepository(Area::class);
         $data['area'] = $areaRepository->getArrayChildren($areaRepository->findAll());
 
         return Responses::success('成功得到数据', $data);
