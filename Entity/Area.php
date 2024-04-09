@@ -30,7 +30,7 @@ class Area
     #[ORM\Column(name: "name", type: "string", length: 45, options: ["comment" => "区域名称"])]
     private ?string $name = null;
 
-    #[ORM\Column(name: "first_letter", type: "string", nullable: true, length: 1, options: ["fixed" => true, "comment" => "区域名称首字母"])]
+    #[ORM\Column(name: "first_letter", type: "string",  length: 1, nullable: true, options: ["fixed" => true, "comment" => "区域名称首字母"])]
     private ?string $firstLetter = null;
 
     #[ORM\Column(name: "level", type: "smallint", options: ["default" => 0, "comment" => "数据层级"])]
