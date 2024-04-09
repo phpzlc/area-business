@@ -1,67 +1,40 @@
 <?php
-/**
- * PhpStorm.
- * User: Jay
- * Date: 2020/10/12
- */
 
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\AreaRepository;
 
-/**
- * Area
- *
- * @ORM\Entity(repositoryClass=AreaRepository::class)
- * @ORM\Table(name="area", options={"comment":"省市区表"})
- */
+#[ORM\Entity(repositoryClass: AreaRepository::class)]
+#[ORM\Table(name: "area", options: ["comment" => "省市区表"])]
 class Area
 {
     public static function getLevels()
     {
-        return array(
+        return [
             1 => '一级',
             2 => '二级',
             3 => '三级'
-        );
+        ];
     }
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="id", type="string", length=10, options={"comment":"省市区编号"})
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
-     */
-    private $id;
+    #[ORM\Column(name: "id", type: "string", length: 10, options: ["comment" => "省市区编号"])]
+    #[ORM\Id]
+    #[ORM\GeneratedValue(strategy: "NONE")]
+    private string $id;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Area")
-     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id")
-     */
-    private $parent;
+    #[ORM\ManyToOne(targetEntity: "App\Entity\Area")]
+    #[ORM\JoinColumn(name: "parent_id", referencedColumnName: "id")]
+    private ?self $parent = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=45, options={"comment":"区域名称"})
-     */
-    private $name;
+    #[ORM\Column(name: "name", type: "string", length: 45, options: ["comment" => "区域名称"])]
+    private ?string $name = null;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="first_letter", type="string", nullable=true, length=1, options={"fixed":true, "comment":"区域名称首字母"})
-     */
-    private $firstLetter;
+    #[ORM\Column(name: "first_letter", type: "string", nullable: true, length: 1, options: ["fixed" => true, "comment" => "区域名称首字母"])]
+    private ?string $firstLetter = null;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="level", type="smallint", options={"default": 0, "comment":"数据层级"})
-     */
-    private $level;
+    #[ORM\Column(name: "level", type: "smallint", options: ["default" => 0, "comment" => "数据层级"])]
+    private int $level = 0;
 
 
     public function getId(): ?string
