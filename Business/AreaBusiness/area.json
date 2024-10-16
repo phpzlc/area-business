@@ -1171,8 +1171,8 @@
 }, {
   "id": "140202",
   "parent_id": "140200",
-  "name": "城区",
-  "first_letter": "C"
+  "name": "平城区",
+  "first_letter": "P"
 }, {
   "id": "140203",
   "parent_id": "140200",
